@@ -1,0 +1,18 @@
+version: '3'
+services:
+    postgres:
+        image: postgres:10
+        environment:
+            - POSTGRES_DB=postgres
+            - POSTGRES_USER=odoo
+            - POSTGRES_PASSWORD=odoo
+            - PGDATA=/home/odoo/odoo-dev/firestore/data/pgdata
+    odoo:
+        build: .
+        depends_on:
+            - postgres
+        ports:
+            - "8069:8069"
+        volumes:
+            - ./config:/home/odoo/odoo-dev/config
+            - ./addons:/home/odoo/odoo-dev/addons

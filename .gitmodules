@@ -1,0 +1,3 @@
+[submodule "/Users/juan/code/odoo/template-odoo-v13/src"]
+	path = /Users/juan/code/odoo/template-odoo-v13/src
+	url = https://github.com/Intello-Juan/odoo.git
